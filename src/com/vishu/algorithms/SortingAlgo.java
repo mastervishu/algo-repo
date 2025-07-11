@@ -52,12 +52,17 @@ public class SortingAlgo {
     }
 
     public void  bubbleSort(){
+        boolean swapped;
         for(int i = 0; i < this.capacity; i++){
+            swapped = true;
             for(int j = 0; j < this.capacity - i - 1; j++){
                 if(this.arr[j] > this.arr[j + 1]){
                     this.swap(j, j + 1);
+                    swapped = false;
                 }
             }
+
+            if(!swapped) break;
         }
 
         this.doneMessage("Bubble Sort");
