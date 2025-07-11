@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         SortingAlgo<Integer> algo = new SortingAlgo<Integer>();
 
-        // code
         List<Integer> numbers = Arrays.asList(5, 2, 8, 1, 9);
         algo.setArr(numbers);
 
