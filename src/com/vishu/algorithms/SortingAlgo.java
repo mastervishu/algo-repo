@@ -1,8 +1,5 @@
 package com.vishu.algorithms;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class SortingAlgo {
     private Integer[] arr;
@@ -35,14 +32,22 @@ public class SortingAlgo {
     }
 
     public void selectionSort(){
+        long startTime = System.nanoTime();
+
         for(int i = 0; i < this.capacity; i++){
-            for(int k = i + 1; k < this.capacity; k++){
+            int min = i;
+            for(int k = i; k < this.capacity; k++){
                 if(this.arr[i] > this.arr[k]){
-                    this.swap(i, k);
+                    min = k;
                 }
             }
+
+            this.swap(min, i);
         }
 
+        long durationInNano = System.nanoTime() - startTime;
+        System.out.println("Execution time in milliseconds: " + (durationInNano / 1_000_000));
         this.doneMessage();
+
     }
 }
