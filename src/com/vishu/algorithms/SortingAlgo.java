@@ -20,8 +20,8 @@ public class SortingAlgo {
         this.arr[j] = temp;
     }
 
-    private void doneMessage(){
-        System.out.println("[i] sorting done successfully");
+    private void doneMessage(String algo){
+        System.out.println("[i] sorting done successfully by " + algo);
     }
 
     public void print(){
@@ -47,7 +47,20 @@ public class SortingAlgo {
 
         long durationInNano = System.nanoTime() - startTime;
         System.out.println("Execution time in milliseconds: " + (durationInNano / 1_000_000));
-        this.doneMessage();
+        this.doneMessage("selection sort");
+        this.print();
+    }
 
+    public void  bubbleSort(){
+        for(int i = 0; i < this.capacity; i++){
+            for(int j = 0; j < this.capacity - i - 1; j++){
+                if(this.arr[j] > this.arr[j + 1]){
+                    this.swap(j, j + 1);
+                }
+            }
+        }
+
+        this.doneMessage("Bubble Sort");
+        this.print();
     }
 }

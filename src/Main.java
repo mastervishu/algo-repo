@@ -11,7 +11,6 @@ public class Main {
         algo.setArr(numbers);
 
         algo.print();
-        algo.selectionSort();
-        algo.print();
+        algo.bubbleSort();
     }
 }
