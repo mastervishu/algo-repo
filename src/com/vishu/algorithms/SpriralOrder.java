@@ -11,7 +11,7 @@ public class SpriralOrder {
         };
 
         List<Integer> ans = spiralOrder(matrix);
-        System.out.println(ans);
+        System.out.println("spiral order > " + ans);
     }
 
     public static List<Integer> spiralOrder(int[][] matrix) {
